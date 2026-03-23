@@ -15,7 +15,7 @@ const SpecialBanner =() =>{
                         ))}
                     </div>
                     <div className="special-banner__image-container">
-                        <img src="https://www.off---white.com/BWStaticContent/53000/ade9d580-d18c-4bad-a4b4-11f7e7f8f25d_skate-caps-web.jpg" alt="Colección de caballeros" className="special-banner__image"/>
+                        <img src={Banner} alt="Colección de caballeros" className="special-banner__image"/>
                     </div>
                 </div>
                 <div className="special-banner__block special-banner__block--2">
