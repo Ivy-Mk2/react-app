@@ -32,7 +32,20 @@ const Marquee = () => {
         <div className={styles.marquee__title}>
           <h1>Hot Sales</h1>
         </div>
-        <Carousel responsive={responsive}>
+        <Carousel
+          responsive={responsive}
+          infinite
+          autoPlay
+          autoPlaySpeed={1200}
+          pauseOnHover
+          rtl
+          arrows={false}
+          draggable
+          swipeable
+          keyBoardControl
+          customTransition="transform 1200ms linear"
+          transitionDuration={1200}
+        >
           {products.map((product) => (
             <div className={styles['product-card']} key={product.id}>
               <div className={styles['product-card__container']}>
@@ -44,7 +57,10 @@ const Marquee = () => {
                   />
                   <div className={styles['product-card__price']}>
                     <span className={styles['product-card__price--original']}>
-                      <Link className={styles['product-card__price--original']} to="/product_detail">
+                      <Link
+                        className={styles['product-card__price--original']}
+                        to="/product_detail"
+                      >
                         ${product.originalPrice.toFixed(2)}
                       </Link>
                     </span>
