@@ -36,15 +36,14 @@ const Marquee = () => {
           responsive={responsive}
           infinite
           autoPlay
-          autoPlaySpeed={1200}
+          autoPlaySpeed={1}
           pauseOnHover
-          rtl
-          arrows={false}
+          arrows
           draggable
           swipeable
           keyBoardControl
-          customTransition="transform 1200ms linear"
-          transitionDuration={1200}
+          customTransition="transform 3000ms linear"
+          transitionDuration={3000}
         >
           {products.map((product) => (
             <div className={styles['product-card']} key={product.id}>
@@ -67,7 +66,7 @@ const Marquee = () => {
                   </div>
                 </div>
                 <div className={styles['product-card__description']}>
-                  <Link className="product-card__description" to="/product_detail">
+                  <Link className={styles['product-card__description-title']} to="/product_detail">
                     {product.description}
                   </Link>
                   <Link className={styles['product-card__shortDescription']} to="/product_detail">
