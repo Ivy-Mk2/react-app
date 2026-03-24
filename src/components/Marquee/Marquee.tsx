@@ -36,8 +36,9 @@ const Marquee = () => {
           responsive={responsive}
           infinite
           autoPlay
-          autoPlaySpeed={1}
+          autoPlaySpeed={3000}
           pauseOnHover
+          shouldResetAutoplay={false}
           arrows
           draggable
           swipeable
